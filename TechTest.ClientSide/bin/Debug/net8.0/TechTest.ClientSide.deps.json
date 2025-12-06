@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TechTest.ClientSide/1.0.0": {
+        "dependencies": {
+          "TechTest.Core": "1.0.0"
+        },
+        "runtime": {
+          "TechTest.ClientSide.dll": {}
+        }
+      },
+      "TechTest.Core/1.0.0": {
+        "runtime": {
+          "TechTest.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TechTest.ClientSide/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TechTest.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

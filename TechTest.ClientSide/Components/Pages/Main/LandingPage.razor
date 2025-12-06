@@ -1,5 +1,9 @@
 ﻿@page "/employees"
-@inject IHttpClientFactory ClientFactory
+@using TechTest.ClientSide.Data
+@using TechTest.ClientSide.Models
+@using TechTest.ClientSide.Mapping
+@inject EmployeeService EmployeeService
+@inject AuthenticationState AuthenticationState
 
 <h3>Employees</h3>
 
@@ -12,17 +16,16 @@ else
     <ul>
         @foreach (var emp in employees)
         {
-            <li>@emp.Name (@emp.Role)</li>
+            <li>@emp.FirstName (@emp.FullName)</li>
         }
     </ul>
 }
 
 @code {
-    private List<EmployeeDto>? employees;
+    private List<EmployeeViewModel>? employees;
 
     protected override async Task OnInitializedAsync()
     {
-        var client = ClientFactory.CreateClient("TechTestApi");
-        employees = await client.GetFromJsonAsync<List<EmployeeDto>>("/api/employees");
+        employees = await EmployeeService.GetEmployeesAsync();
     }
 }

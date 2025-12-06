@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\RRolin-Sim\\source\\repos\\RrolinTechnicalTest\\TechTest.ClientSide\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TechTest.ClientSide.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TechTest.ClientSide.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\RRolin-Sim\\source\\repos\\RrolinTechnicalTest\\TechTest.ClientSide\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\RRolin-Sim\\source\\repos\\RrolinTechnicalTest\\TechTest.ClientSide\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\RRolin-Sim\\source\\repos\\RrolinTechnicalTest\\TechTest.ClientSide\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\RRolin-Sim\\source\\repos\\RrolinTechnicalTest\\TechTest.ClientSide\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TechTest.ClientSide.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TechTest.ClientSide.props",
+      "PackagePath": "build\\TechTest.ClientSide.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TechTest.ClientSide.props",
+      "PackagePath": "buildMultiTargeting\\TechTest.ClientSide.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TechTest.ClientSide.props",
+      "PackagePath": "buildTransitive\\TechTest.ClientSide.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

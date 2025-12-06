@@ -1,4 +1,5 @@
 using TechTest.ClientSide.Components;
+using TechTest.ClientSide.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,11 @@ builder.Services.AddHttpClient("TechTestApi", client =>
     //TODO Replace with actual
     client.BaseAddress = new Uri("https://apilocaltest"); // WebApi base URL
 });
+
+// JWT Store
+builder.Services.AddSingleton<AuthenticationState>();
+
+builder.Services.AddScoped<AuthenticationService>();
 
 var app = builder.Build();
 

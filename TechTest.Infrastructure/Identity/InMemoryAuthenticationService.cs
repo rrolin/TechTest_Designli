@@ -4,8 +4,7 @@
     {
         private readonly Dictionary<string, string> _users = new()
         {
-            { "testuser", "password123" },
-            { "admin", "adminpass" }
+            { "cnorris", "ChuckNorris" },
         };
 
         public bool ValidateCredentials(string username, string password)

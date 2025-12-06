@@ -35,3 +35,12 @@ C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.WebApi\obj\Debug\n
 C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.WebApi\obj\Debug\net8.0\TechTest.WebApi.pdb
 C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.WebApi\obj\Debug\net8.0\TechTest.WebApi.genruntimeconfig.cache
 C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.WebApi\obj\Debug\net8.0\ref\TechTest.WebApi.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.WebApi\obj\Debug\net8.0\TechTest.WebApi.sourcelink.json
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.WebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.WebApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

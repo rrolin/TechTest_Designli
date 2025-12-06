@@ -13,3 +13,4 @@ C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj
 C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\refint\TechTest.Infrastructure.dll
 C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\TechTest.Infrastructure.pdb
 C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\ref\TechTest.Infrastructure.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\TechTest.Infrastructure.sourcelink.json

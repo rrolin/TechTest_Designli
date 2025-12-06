@@ -1,27 +1,46 @@
 ﻿@page "/login"
-@inject IHttpClientFactory ClientFactory
+@using TechTest.ClientSide.Data
+@inject AuthenticationService AuthenticationService
 
-<h3>Login</h3>
+<div class="container d-flex align-items-center justify-content-center vh-100">
+    <div class="card shadow-sm" style="max-width: 400px; width: 100%;">
+        <div class="card-body">
+            <h3 class="card-title text-center mb-4">Inicio de sesi&oacute;n</h3>
 
-<input @bind="Username" placeholder="Username" />
-<input type="password" @bind="Password" placeholder="Password" />
-<button @onclick="Login">Login</button>
+            <form>
+                <div class="mb-3">
+                    <label for="inputUsername" class="form-label">Usuario</label>
+                    <input type="email" class="form-control" id="inputUsername" placeholder="Usuario" @bind="username">
+                </div>
 
-<p>@Message</p>
+                <div class="mb-3">
+                    <label for="inputPassword" class="form-label">Contrase&ntilde;a</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="••••••••" @bind="password">
+                </div>
+
+                <div class="d-grid">
+                    <button @onclick="HandleLoginRequest" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 @code {
-    private string Username { get; set; } = "";
-    private string Password { get; set; } = "";
-    private string Message { get; set; } = "";
+    private string username { get; set; } = "";
+    private string password { get; set; } = "";
+    private string message { get; set; } = "";
 
-    private async Task Login()
+    private async Task HandleLoginRequest()
     {
-        var client = ClientFactory.CreateClient("TechTestApi");
-        var response = await client.PostAsJsonAsync("/api/auth/login", new { Username, Password });
-
-        if (response.IsSuccessStatusCode)
-            Message = "Login successful!";
+        var loginSucess = await AuthenticationService.LoginAsync(username, password);
+        if (loginSucess is null)
+        {
+            //NavManager.NavigateTo("/employees");
+        }
         else
-            Message = "Invalid credentials.";
+        {
+            
+        }
     }
 }

@@ -103,3 +103,4 @@ C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Test\bin\Debug\net
 C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Test\bin\Debug\net8.0\TechTest.Infrastructure.dll
 C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Test\bin\Debug\net8.0\TechTest.Core.pdb
 C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Test\bin\Debug\net8.0\TechTest.Infrastructure.pdb
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Test\obj\Debug\net8.0\TechTest.Test.sourcelink.json
