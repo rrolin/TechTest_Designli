@@ -1,0 +1,28 @@
+﻿@page "/employees"
+@inject IHttpClientFactory ClientFactory
+
+<h3>Employees</h3>
+
+@if (employees == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var emp in employees)
+        {
+            <li>@emp.Name (@emp.Role)</li>
+        }
+    </ul>
+}
+
+@code {
+    private List<EmployeeDto>? employees;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var client = ClientFactory.CreateClient("TechTestApi");
+        employees = await client.GetFromJsonAsync<List<EmployeeDto>>("/api/employees");
+    }
+}

@@ -1,0 +1,27 @@
+﻿@page "/login"
+@inject IHttpClientFactory ClientFactory
+
+<h3>Login</h3>
+
+<input @bind="Username" placeholder="Username" />
+<input type="password" @bind="Password" placeholder="Password" />
+<button @onclick="Login">Login</button>
+
+<p>@Message</p>
+
+@code {
+    private string Username { get; set; } = "";
+    private string Password { get; set; } = "";
+    private string Message { get; set; } = "";
+
+    private async Task Login()
+    {
+        var client = ClientFactory.CreateClient("TechTestApi");
+        var response = await client.PostAsJsonAsync("/api/auth/login", new { Username, Password });
+
+        if (response.IsSuccessStatusCode)
+            Message = "Login successful!";
+        else
+            Message = "Invalid credentials.";
+    }
+}

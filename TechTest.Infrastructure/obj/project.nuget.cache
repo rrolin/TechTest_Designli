@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Lv9LQLkbYSA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\RRolin-Sim\\source\\repos\\RrolinTechnicalTest\\TechTest.Infrastructure\\TechTest.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\RRolin-Sim\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.0\\microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

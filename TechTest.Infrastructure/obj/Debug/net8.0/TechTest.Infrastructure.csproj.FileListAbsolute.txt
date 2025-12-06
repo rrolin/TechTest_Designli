@@ -1,0 +1,15 @@
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\TechTest.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\TechTest.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\TechTest.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\TechTest.Infrastructure.AssemblyInfo.cs
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\TechTest.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\bin\Debug\net8.0\TechTest.Infrastructure.deps.json
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\bin\Debug\net8.0\TechTest.Infrastructure.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\bin\Debug\net8.0\TechTest.Infrastructure.pdb
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\bin\Debug\net8.0\TechTest.Core.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\bin\Debug\net8.0\TechTest.Core.pdb
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\TechTest.53579EA1.Up2Date
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\TechTest.Infrastructure.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\refint\TechTest.Infrastructure.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\TechTest.Infrastructure.pdb
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Infrastructure\obj\Debug\net8.0\ref\TechTest.Infrastructure.dll

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "kV6Oh8ub+msfwoDQRCkxSNep25IiZLvX1Jwol2WEMXM=",
+  "Source": "TechTest.WebApi",
+  "BasePath": "_content/TechTest.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

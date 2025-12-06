@@ -1,0 +1,11 @@
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Core\bin\Debug\net8.0\TechTest.Core.deps.json
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Core\bin\Debug\net8.0\TechTest.Core.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Core\bin\Debug\net8.0\TechTest.Core.pdb
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Core\obj\Debug\net8.0\TechTest.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Core\obj\Debug\net8.0\TechTest.Core.AssemblyInfoInputs.cache
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Core\obj\Debug\net8.0\TechTest.Core.AssemblyInfo.cs
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Core\obj\Debug\net8.0\TechTest.Core.csproj.CoreCompileInputs.cache
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Core\obj\Debug\net8.0\TechTest.Core.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Core\obj\Debug\net8.0\refint\TechTest.Core.dll
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Core\obj\Debug\net8.0\TechTest.Core.pdb
+C:\Users\RRolin-Sim\source\repos\RrolinTechnicalTest\TechTest.Core\obj\Debug\net8.0\ref\TechTest.Core.dll
