@@ -1,4 +1,4 @@
-﻿namespace TechTest.Core.Domain.Enum
+﻿namespace TechTest.Core.Common.Enum
 {
     public enum LogTypeEnum
     {

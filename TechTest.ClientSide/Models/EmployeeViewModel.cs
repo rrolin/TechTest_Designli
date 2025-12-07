@@ -5,9 +5,9 @@
         public string? FullName => $"{FirstName} {LastName}";
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
-        public DateTime? Birthdate { get; set; }
-        public DateTime? EnteredDate { get; set; }
-        public DateTime? UpdatedDate { get; set; }
+        public string? Birthdate { get; set; }
+        public string? EnteredDate { get; set; }
+        public string? UpdatedDate { get; set; }
         public string? Error { get; set; }
     }
 }

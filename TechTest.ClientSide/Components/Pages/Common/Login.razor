@@ -1,46 +1,98 @@
-﻿@page "/login"
+﻿@page "/"
+@layout LoginLayout
 @using TechTest.ClientSide.Data
+@using TechTest.ClientSide.Models
+@using TechTest.ClientSide.Components.Layout
+@inject NavigationManager NavManager
+@inject AuthenticationState AuthenticationState
 @inject AuthenticationService AuthenticationService
 
 <div class="container d-flex align-items-center justify-content-center vh-100">
     <div class="card shadow-sm" style="max-width: 400px; width: 100%;">
         <div class="card-body">
-            <h3 class="card-title text-center mb-4">Inicio de sesi&oacute;n</h3>
+            <h3 class="card-title text-center mb-4">Login</h3>
 
-            <form>
+            <EditForm Model="@loginModel" OnValidSubmit="HandleLoginRequest">
+                <DataAnnotationsValidator />
+
                 <div class="mb-3">
-                    <label for="inputUsername" class="form-label">Usuario</label>
-                    <input type="email" class="form-control" id="inputUsername" placeholder="Usuario" @bind="username">
+                    <label for="inputUsername" class="form-label">Username</label>
+                    <InputText type="text" class="form-control" id="inputUsername" placeholder="Username" @bind-Value="loginModel.userName" />
+                    <ValidationMessage For="@(() => loginModel.userName)" />
                 </div>
 
                 <div class="mb-3">
-                    <label for="inputPassword" class="form-label">Contrase&ntilde;a</label>
-                    <input type="password" class="form-control" id="inputPassword" placeholder="••••••••" @bind="password">
+                    <label for="inputPassword" class="form-label">Password</label>
+                    <InputText type="password" class="form-control" id="inputPassword" placeholder="••••••••" @bind-Value="loginModel.password" />
+                    <ValidationMessage For="@(() => loginModel.password)" />
                 </div>
 
                 <div class="d-grid">
-                    <button @onclick="HandleLoginRequest" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary" disabled="@isLoading">
+                        @(isLoading ? "Signing In..." : "Sign In")
+                    </button>
                 </div>
-            </form>
+            </EditForm>
+
+            @if (string.IsNullOrEmpty(errorMessage) is false)
+            {
+                <div class="alert alert-danger mt-3" role="alert">
+                    @errorMessage
+                </div>
+            }
         </div>
     </div>
 </div>
 
 @code {
-    private string username { get; set; } = "";
-    private string password { get; set; } = "";
-    private string message { get; set; } = "";
+    private LoginViewModel loginModel = new();
+    private bool isLoading = false;
+    private string? errorMessage { get; set; } = null;
 
+    /// <summary>
+    /// Prevent authenticated users to load this page
+    /// </summary>
+    protected override void OnInitialized()
+    {
+        // If token exists, redirect immediately
+        if (!string.IsNullOrEmpty(AuthenticationState.jwtToken))
+        {
+            NavManager.NavigateTo("/landing", forceLoad: true);
+        }
+    }
+
+    /// <summary>
+    /// Login request handler
+    /// </summary>
+    /// <returns></returns>
     private async Task HandleLoginRequest()
     {
-        var loginSucess = await AuthenticationService.LoginAsync(username, password);
-        if (loginSucess is null)
+        isLoading = true;
+        var loginSucess = await AuthenticationService.LoginAsync(loginModel.userName ?? "", loginModel.password ?? "");
+
+        if (loginSucess is true)
         {
-            //NavManager.NavigateTo("/employees");
+            NavManager.NavigateTo("/landing", forceLoad: true);
         }
         else
         {
-            
+            loginModel.password = string.Empty;
+            await TriggerError("Invalid username or password.");
+            isLoading = false;
         }
+    }
+
+    /// <summary>
+    /// Error display handler
+    /// </summary>
+    /// <param name="displayError">Displaying error</param>
+    /// <returns></returns>
+    private async Task TriggerError(string displayError)
+    {
+        errorMessage = displayError;
+        StateHasChanged();
+        await Task.Delay(3000);
+        errorMessage = null;
+        StateHasChanged();
     }
 }

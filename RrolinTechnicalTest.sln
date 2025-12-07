@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTest.WebApi", "TechTest.WebApi\TechTest.WebApi.csproj", "{ADAABC08-8606-49A3-B6BF-5E28AF78ED20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTest.WebApi", "TechTest.WebApi\TechTest.WebApi.csproj", "{ADAABC08-8606-49A3-B6BF-5E28AF78ED20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTest.Core", "TechTest.Core\TechTest.Core.csproj", "{8F11F321-D2FC-4EF6-868F-FD5517CF3949}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTest.Core", "TechTest.Core\TechTest.Core.csproj", "{8F11F321-D2FC-4EF6-868F-FD5517CF3949}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTest.Infrastructure", "TechTest.Infrastructure\TechTest.Infrastructure.csproj", "{47F6931C-45CF-4FD7-92E3-F264E66A549B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTest.Infrastructure", "TechTest.Infrastructure\TechTest.Infrastructure.csproj", "{47F6931C-45CF-4FD7-92E3-F264E66A549B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1C841E01-EEC4-4205-9001-F3102E3857D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C4F784BC-1D94-4DEA-B13E-D9903BBBB70C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTest.Test", "TechTest.Test\TechTest.Test.csproj", "{82A7B3DF-13EA-4AF4-A542-E91027FE9732}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTest.Test", "TechTest.Test\TechTest.Test.csproj", "{82A7B3DF-13EA-4AF4-A542-E91027FE9732}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTest.ClientSide", "TechTest.ClientSide\TechTest.ClientSide.csproj", "{C95A1B02-832B-4CB4-8B73-106503961B51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTest.ClientSide", "TechTest.ClientSide\TechTest.ClientSide.csproj", "{C95A1B02-832B-4CB4-8B73-106503961B51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

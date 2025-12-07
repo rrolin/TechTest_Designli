@@ -2,6 +2,9 @@
 
 namespace TechTest.ClientSide.Data
 {
+    /// <summary>
+    /// Base service for authenticated API calls.
+    /// </summary>
     public abstract class BaseService
     {
         protected readonly HttpClient _http;
@@ -13,19 +16,21 @@ namespace TechTest.ClientSide.Data
             _authenticationState = authenticationState;
         }
 
+        /// <summary>
+        /// Generic GET method with JWT token attachment.
+        /// </summary>
+        /// <typeparam name="T">Type of</typeparam>
+        /// <param name="url">Http Request Url</param>
+        /// <returns></returns>
         protected async Task<T?> GetAsync<T>(string url)
         {
             AttachToken();
             return await _http.GetFromJsonAsync<T>(url);
         }
 
-        protected async Task<T?> PostAsync<T>(string url, object data)
-        {
-            var response = await _http.PostAsJsonAsync(url, data);
-            response.EnsureSuccessStatusCode();
-            return await response.Content.ReadFromJsonAsync<T>();
-        }
-
+        /// <summary>
+        /// Attach session JWT token to request headers.
+        /// </summary>
         private void AttachToken()
         {
             if (!string.IsNullOrEmpty(_authenticationState.jwtToken))

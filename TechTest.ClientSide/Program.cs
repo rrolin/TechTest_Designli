@@ -1,5 +1,5 @@
-using TechTest.ClientSide.Components;
 using TechTest.ClientSide.Data;
+using TechTest.ClientSide.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,17 +7,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Register HttpClient for WebApi calls
+// Register HttpClient for API calls on authenticated endpoints (those use BaseService)
 builder.Services.AddHttpClient("TechTestApi", client =>
 {
-    //TODO Replace with actual
-    client.BaseAddress = new Uri("https://apilocaltest"); // WebApi base URL
+    client.BaseAddress = new Uri("https://localhost:7129"); // WebApi base URL
 });
 
-// JWT Store
+// Services registration
 builder.Services.AddSingleton<AuthenticationState>();
-
 builder.Services.AddScoped<AuthenticationService>();
+builder.Services.AddScoped<EmployeeService>();
 
 var app = builder.Build();
 

@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity.Data;
+﻿using System.Text;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
 using TechTest.Infrastructure.Identity;
 
 namespace TechTest.WebApi.Controllers
@@ -13,9 +12,11 @@ namespace TechTest.WebApi.Controllers
     public class AuthenticationController : Controller
     {
         private readonly InMemoryAuthenticationService _authenticationService;
-        public AuthenticationController(InMemoryAuthenticationService authenticationService)
+        private readonly IConfiguration _configuration;
+        public AuthenticationController(InMemoryAuthenticationService authenticationService, IConfiguration configuration)
         {
             _authenticationService = authenticationService;
+            _configuration = configuration;
         }
 
         [HttpPost("login")]
@@ -29,12 +30,15 @@ namespace TechTest.WebApi.Controllers
                 new Claim(ClaimTypes.Name, request.Username)
             };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("SuperSecretKey12345"));
+            var hexKey = _configuration["JwtSettings:Key"];
+            var issuer = _configuration["JwtSettings:Issuer"];
+            var audience = _configuration["JwtSettings:Audience"];
+            var key = new SymmetricSecurityKey(Convert.FromHexString(hexKey ?? ""));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
-                issuer: "TechTestWebApi",
-                audience: "TechTestClientSide",
+                issuer: issuer,
+                audience: audience,
                 claims: claims,
                 expires: DateTime.UtcNow.AddHours(1),
                 signingCredentials: creds);

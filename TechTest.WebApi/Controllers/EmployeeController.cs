@@ -24,7 +24,7 @@ namespace TechTest.WebApi.Controllers
             return Ok(employees);
         }
 
-        [HttpGet]
+        [HttpGet("{employeeId}")]
         [AllowAnonymous] // For easy swagger testing, not meant to work like that IRL.
         public IActionResult GetEmployeeById(int employeeId)
         {
@@ -47,15 +47,15 @@ namespace TechTest.WebApi.Controllers
             if (employee.EmployeeId < 1) return BadRequest();
 
             _repository.Update(employee);
-            return NoContent();
+            return Ok();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{employeeId}")]
         [AllowAnonymous] // For easy swagger testing, not meant to work like that IRL.
         public IActionResult Delete(int employeeId)
         {
             _repository.Delete(employeeId);
-            return NoContent();
+            return Ok();
         }
     }
 }

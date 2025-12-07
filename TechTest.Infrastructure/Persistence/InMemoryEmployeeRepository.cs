@@ -3,6 +3,9 @@ using TechTest.Core.Domain.Interfaces;
 
 namespace TechTest.Infrastructure.Persistence
 {
+    /// <summary>
+    /// In memory data store for employee objects
+    /// </summary>
     public class InMemoryEmployeeRepository : IEmployeeRepository
     {
         // In memory data
@@ -20,7 +23,7 @@ namespace TechTest.Infrastructure.Persistence
             new Employee(
                 employeeId: 2,
                 firstName: "Emmet",
-                lastName: "Browm",
+                lastName: "Brown",
                 birthDate: new DateTime(1938, 10, 22),
                 isActive: true,
                 enteredDate: new DateTime(1955, 11, 5),
@@ -116,7 +119,6 @@ namespace TechTest.Infrastructure.Persistence
             {
                 employeeToRemove.IsActive = false;
                 employeeToRemove.UpdatedDate = DateTime.Now;
-                Update(employeeToRemove);
             }
         }
     }

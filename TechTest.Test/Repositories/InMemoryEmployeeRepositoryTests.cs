@@ -41,7 +41,7 @@ namespace TechTest.Test.Repositories
             (
                 employeeId: 2,
                 firstName: "Emmet",
-                lastName: "Browm",
+                lastName: "Brown",
                 birthDate: new DateTime(1938, 10, 22),
                 isActive: true,
                 enteredDate: new DateTime(1985, 11, 5),
@@ -60,11 +60,11 @@ namespace TechTest.Test.Repositories
         public void DeleteEmployeeTest()
         {
             var repository = new InMemoryEmployeeRepository();
+            var employeeCountBefore = repository.GetAll().Count();
             repository.Delete(employeeId: 1);
+            var employeeCountAfter = repository.GetAll().Count();
 
-            var removedEmployee = repository.GetById(employeeId: 1);
-            Assert.NotNull(removedEmployee);
-            Assert.NotEqual(1, removedEmployee.EmployeeId);
+            Assert.NotEqual(employeeCountBefore, employeeCountAfter);
         }
     }
 }

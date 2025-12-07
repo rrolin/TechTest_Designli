@@ -1,25 +1,26 @@
 ﻿using TechTest.ClientSide.Models;
+using TechTest.ClientSide.Mapping;
 using TechTest.Core.Application.DTO;
 
 namespace TechTest.ClientSide.Data
 {
+    /// <summary>
+    /// Service for Employee object operations.
+    /// </summary>
     public class EmployeeService : BaseService
     {
         public EmployeeService(IHttpClientFactory factory, AuthenticationState authState)
         : base(factory, authState) { }
+
+        /// <summary>
+        /// Get method for retrieve all employees.
+        /// </summary>
+        /// <returns>Employee list</returns>
         public async Task<List<EmployeeViewModel>> GetEmployeesAsync()
         {
-            var dtos = await GetAsync<List<EmployeeDto>>("/api/employees") ?? new List<EmployeeDto>();
+            var employeeDtos = await GetAsync<List<EmployeeDto>>("/api/Employee") ?? new List<EmployeeDto>();
 
-            return dtos.Select(dto => new EmployeeViewModel
-            {
-                FirstName = dto.FirstName,
-                LastName = dto.LastName,
-                Birthdate = dto.Birthdate,
-                EnteredDate = dto.EnteredDate,
-                UpdatedDate = dto.UpdatedDate,
-                Error = dto.Errors.FirstOrDefault()
-            }).ToList();
+            return employeeDtos.ToViewModel();
         }
     }
 }

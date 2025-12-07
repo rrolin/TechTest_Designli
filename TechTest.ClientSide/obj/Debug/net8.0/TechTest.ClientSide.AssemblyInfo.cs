@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechTest.ClientSide")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52d253564a56fe6bcb52978875ad247256e1c9f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8020e46f8233c7d4f5698a7cbbc6860eafb73cdb")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechTest.ClientSide")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechTest.ClientSide")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

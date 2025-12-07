@@ -1,4 +1,7 @@
-﻿@inherits LayoutComponentBase
+﻿@using TechTest.ClientSide.Data
+@inherits LayoutComponentBase
+@inject NavigationManager NavManager
+@inject AuthenticationState AuthState
 
 <div class="page">
     <div class="sidebar">
@@ -7,7 +10,7 @@
 
     <main>
         <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <button class="btn btn-link" @onclick="SignOut">Sign Out</button>
         </div>
 
         <article class="content px-4">
@@ -21,3 +24,14 @@
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
 </div>
+
+@code {
+    /// <summary>
+    /// Sign out and clear the authentication token.
+    /// </summary>
+    private void SignOut()
+    {
+        AuthState.ClearToken();
+        NavManager.NavigateTo("/", forceLoad: true);
+    }
+}
